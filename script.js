@@ -130,6 +130,12 @@ projects: [
     category: "academic",
     timeframe: "Coursework",
     image: "assets/analysis.jpg",
+    images: [
+    "assets/analysis1.jpg",
+    "assets/analysis2.jpg",
+    "assets/analysis3.jpg",
+    "assets/analysis4.jpg"
+  ],
     oneLiner: "Physics-based modeling and numerical problem solving using engineering software.",
     description:
       "Representative engineering analysis projects emphasizing modeling assumptions, numerical methods, and result interpretation.",
