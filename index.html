@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eliel Smith • Aerospace Engineering Portfolio</title>
+  <meta name="description" content="Eliel Smith — Aerospace Engineering (B.S.) and STEM Path to MBA candidate at The University of Alabama. Projects, experience, and skills." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top Nav -->
+  <header class="topbar" id="top">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Eliel Smith</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+          <span class="nav__toggleBars" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#awards">Honors</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+              Theme
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="kicker" id="heroKicker">Aerospace Engineering • Systems • Simulation</p>
+          <h1 class="hero__title">Engineering systems with rigor, initiative, and clarity.</h1>
+          <p class="hero__subtitle" id="heroSubtitle">
+            Aerospace Engineering (B.S.) + STEM Path to MBA candidate at The University of Alabama. I blend academic fundamentals with hands-on engineering teams, modeling & simulation, and technical writing.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn btn--primary" id="resumeBtn" href="assets/resume.pdf" target="_blank" rel="noopener">Open Resume (PDF)</a>
+          </div>
+
+          <div class="hero__chips" id="heroChips" aria-label="Key strengths">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="portrait">
+            <img id="headshot" src="assets/headshot.jpg" alt="Headshot of Eliel Smith" loading="eager" />
+          </div>
+
+          <div class="stats" aria-label="Quick highlights">
+            <div class="stat">
+              <div class="stat__num" id="stat1Num">2026</div>
+              <div class="stat__label" id="stat1Label">B.S. Graduation</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" id="stat2Num">2027</div>
+              <div class="stat__label" id="stat2Label">MBA Graduation</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" id="stat3Num">Minor</div>
+              <div class="stat__label" id="stat3Label">Mathematics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero__marquee" aria-hidden="true">
+        <div class="marquee">
+         <!-- <span>CFD</span><span>MBSE / SysML</span><span>AFSIM</span><span>Python</span><span>MATLAB</span><span>Ansys</span><span>Technical Writing</span><span>Systems Engineering</span> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <h2>About</h2>
+          <p class="section__sub">
+            Welcome to my online portfolio — designed and built from scratch using HTML, CSS, and JavaScript. Below is a quick snapshot of what I’ve been building, learning, and experimenting with. Thanks for visiting!</p>
+          </p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>What I bring</h3>
+            <ul class="list" id="aboutBullets"></ul>
+          </article>
+
+          <article class="card">
+            <h3>Interests</h3>
+            <div class="tags" id="interestTags"></div>
+            <hr class="divider" />
+            <h3>Outside academia</h3>
+            <div class="tags" id="hobbyTags"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head section__head--row">
+          <div>
+            <h2>Projects</h2>
+            <p class="section__sub">
+              Filter by category: Academic coursework + senior design vs. extracurricular engineering teams.
+            </p>
+          </div>
+
+          <div class="filters" role="tablist" aria-label="Project filters">
+            <button class="chip chip--active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="chip" data-filter="academic" role="tab" aria-selected="false">Academic</button>
+            <button class="chip" data-filter="extracurricular" role="tab" aria-selected="false">Extracurricular</button>
+            <button class="chip" data-filter="research" role="tab" aria-selected="false">Research</button>
+          </div>
+        </div>
+
+        <div class="grid grid--cards" id="projectGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__head">
+          <h2>Experience</h2>
+          <p class="section__sub">Roles that shaped my technical toolbelt and how I communicate engineering work.</p>
+        </div>
+
+        <div class="timeline" id="experienceTimeline"></div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <h2>Skills</h2>
+          <p class="section__sub">Tools + capabilities I use most often.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>Technical</h3>
+            <div class="tags" id="skillsTech"></div>
+          </article>
+          <article class="card">
+            <h3>Engineering</h3>
+            <div class="tags" id="skillsEng"></div>
+          </article>
+          <article class="card">
+            <h3>Communication</h3>
+            <div class="tags" id="skillsComm"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section__head">
+          <h2>Education</h2>
+          <p class="section__sub">Current program and coursework focus areas.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3 id="eduTitle"></h3>
+            <p class="muted" id="eduMeta"></p>
+            <div class="tags" id="eduTags"></div>
+          </article>
+
+          <article class="card">
+            <h3>Relevant Coursework</h3>
+            <ul class="list" id="courseworkList"></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="section" id="awards">
+      <div class="container">
+        <div class="section__head">
+          <h2>Honors & Awards</h2>
+          <p class="section__sub">Recognition that reflects consistency and leadership.</p>
+        </div>
+
+        <div class="grid grid--2" id="awardsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p class="section__sub">Fastest ways to reach me + a simple message form.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Reach out</h3>
+            <div class="contact-list" id="contactList"></div>
+            <hr class="divider" />
+            <p class="muted">
+              Tip: If you’re sharing a role or project opportunity, include the target area (systems, propulsion, CFD, simulation) and a link to the posting.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Message</h3>
+            <form id="contactForm">
+              <label class="field">
+                <span>Name</span>
+                <input required name="name" type="text" placeholder="Your name" />
+              </label>
+
+              <label class="field">
+                <span>Email</span>
+                <input required name="email" type="email" placeholder="you@example.com" />
+              </label>
+
+              <label class="field">
+                <span>Message</span>
+                <textarea required name="message" rows="5" placeholder="What would you like to talk about?"></textarea>
+              </label>
+
+              <button class="btn btn--primary" type="submit">Send</button>
+              <p class="muted" id="formNote">
+                This uses your email app (mailto) — no backend required.
+              </p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> Eliel Smith • Built with HTML/CSS/JS</p>
+        <a class="muted" href="#" id="scrollToTopBtn">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Project Modal -->
+  <dialog class="modal" id="projectModal" aria-label="Project details">
+    <div class="modal__header">
+      <div>
+        <p class="kicker" id="modalKicker">Project</p>
+        <h3 class="modal__title" id="modalTitle"></h3>
+      </div>
+      <button class="btn btn--ghost" id="modalClose" type="button" aria-label="Close">Close</button>
+    </div>
+
+    <div class="modal__body">
+      <div id="modalImg" style="overflow-y:auto; max-height:260px;"></div>
+      <p class="modal__desc" id="modalDesc"></p>
+
+      <div class="grid grid--2 modal__grid">
+        <div class="card card--flat">
+          <h4>Highlights</h4>
+          <ul class="list" id="modalBullets"></ul>
+        </div>
+        <div class="card card--flat">
+          <h4>Tools</h4>
+          <div class="tags" id="modalTools"></div>
+          <hr class="divider" />
+          <h4>Category</h4>
+          <p class="muted" id="modalCategory"></p>
+        </div>
+      </div>
+
+      <div class="modal__links" id="modalLinks"></div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
