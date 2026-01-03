@@ -190,7 +190,7 @@ projects: [
 
   {
   id: "cfd420",
-  title: "Computational Fluid Dynamics Final Project — AEM 420",
+  title: "Computational Fluid Dynamics — Final and Side Projects (AEM 420)",
   category: "academic",
   timeframe: "Final Project",
   image: "assets/cfdfinal.jpg",
