@@ -403,9 +403,13 @@ projects: [
     "Documented and communicated results clearly",
   ],
   tools: ["Research", "AI/ML", "Phaser.js", "PyTorch"],
-  links: [],
+  links: [
+    {
+      label: "Visit Lab Website",
+      href: "https://htilua.org/"
+    }
+  ],
 },
-
 
   {
   id: "aaero",
@@ -734,9 +738,6 @@ if (p.video) {
   imgWrap.appendChild(video);
 }
 
-
-
-
   const bullets = $("#modalBullets");
   bullets.innerHTML = "";
   p.highlights.forEach((h) => {
@@ -769,7 +770,7 @@ if (p.video) {
   } else {
     const note = document.createElement("p");
     note.className = "muted";
-    note.textContent = "Links coming soon — add them in script.js (project.links).";
+    //note.textContent = "Links coming soon — add them in script.js (project.links).";
     links.appendChild(note);
   }
 
