@@ -509,11 +509,12 @@ projects: [
       when: "Sep 2025 — Present",
       title: "STEM Business Honors Senior Project",
       org: "STEM Business Honors VII (GBA 571)",
+      logo: "assets/mda.jpg",
       bullets: [
         "Worked as a business partner alongside MDA to create an integrated air and missile defense system concept.",
       ],
     },
-    {
+    /*{
       when: "Sep 2025 — Present",
       title: "Aerodynamics Systems Lead / Chief Technical Writer",
       org: "FFVTOL Senior Design Project",
@@ -566,7 +567,7 @@ projects: [
         "Conducted hydrostatic pressure tests on aluminum tanks using ASME’s 1.5x FoS.",
         "Designed/researched/manufactured igniters, test stand, flame trench, and P&ID.",
       ],
-    },
+    }, */
     {
       when: "Apr 2025 — Present",
       title: "Membership Chair",
@@ -854,16 +855,22 @@ function renderExperience() {
     const el = document.createElement("article");
     el.className = "role";
 
-    el.innerHTML = `
-      <div class="role__when">${r.when}</div>
-      <div>
-        <h3 class="role__title">${r.title}</h3>
-        <p class="role__org">${r.org}</p>
-        <ul class="list role__bullets">
-          ${r.bullets.map(b => `<li>${b}</li>`).join("")}
-        </ul>
-      </div>
-    `;
+ el.innerHTML = `
+  <div class="role__when">${r.when}</div>
+  <div>
+    <h3 class="role__title">${r.title}</h3>
+    <p class="role__org">${r.org}</p>
+    <ul class="list role__bullets">
+      ${r.bullets.map(b => `<li>${b}</li>`).join("")}
+    </ul>
+  </div>
+`;
+
+
+
+
+
+
 
     wrap.appendChild(el);
   });
