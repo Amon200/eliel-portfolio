@@ -490,11 +490,11 @@ projects: [
 
   oneLiner: "CFD-driven propeller optimization with experimental validation.",
   description:
-    "Built a custom FPV drone and optimized propeller designs through CFD, 3D printing, and test-stand validation.",
+    "Co-founded a student-led aerospace research group with peers to investigate UAV performance and advanced propeller geometries. Designed and built a custom FPV drone platform, then conducted CFD-driven propeller optimization studies followed by rapid prototyping and experimental validation to evaluate performance.",
   highlights: [
-    "Optimized propeller geometry using CFD",
-    "Validated designs via wind-tunnel testing",
-    "Integrated electrical systems via precision soldering",
+    "Optimized and compared multiple propeller geometries using CFD and aerodynamic performance analysis",
+    "Validated designs through wind-tunnel and experimental thrust/noise testing",
+    "Integrated drone electrical systems through precision soldering and flight-ready assembly",
   ],
   tools: ["CFD", "3D Printing", "Testing", "Soldering"],
   links: [],
