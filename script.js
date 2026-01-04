@@ -5,7 +5,7 @@ const SITE = {
   name: "Eliel Smith",
   heroKicker: "Aerospace Engineering • Contextual Systems Thinking",
   heroSubtitle:
-    "Aerospace Engineering (B.S.) + STEM Path to MBA candidate at The University of Alabama. I blend academic fundamentals with hands-on engineering teams, modeling & simulation, and technical writing.",
+    "Aerospace Engineering + STEM MBA candidate at The University of Alabama.",
   headshot: "assets/headshot.jpg", // <- change this ONE line to swap headshot
   strengths: [
     //"Systems Engineering",          
@@ -84,18 +84,18 @@ projects: [
   {
   id: "aerospacecorp",
   title: "The Aerospace Corporation — Modeling & Simulation Intern",
-  category: "all-only",
+  category: "All-only",
   timeframe: "May 2025 — Aug 2025",
   image: "assets/afsim.jpg", // main image for card display
   images: [ // for modal gallery
     "assets/intern.jpg",
   ],
-  oneLiner: "AFSIM scripting and MBSE schema development supporting missile defense enterprise modeling.",
+  oneLiner: "AFSIM scripting and MBSE schema development supporting the Missile Defense Agency",
   description:
-    "Internship work focused on modeling and simulation for defense applications. I developed AFSIM scripts for field-of-view simulation and built an MBSE schema in Cameo Systems Modeler to map enterprise capabilities.",
+    "Work focused on modeling and simulation for defense applications; I developed AFSIM scripts for radar scheduling and built an MBSE schema in Cameo Systems Modeler to organize MDA capabilities.",
   highlights: [
-    "Developed commands and scripts in AFSIM to simulate scheduled instantaneous field of view",
-    "Built an MBSE schema in Cameo Systems Modeler to map program and enterprise capabilities",
+    "Developed programs in AFSIM to simulate optimized radar platforms",
+    "Built an MBSE schema in Cameo Systems Modeler to map MDA program and enterprise capabilities",
     "Produced clear technical artifacts for stakeholder communication and traceability",
   ],
   tools: ["AFSIM", "Cameo Systems Modeler", "Modeling & Simulation"],
@@ -112,6 +112,12 @@ projects: [
     category: "academic",
     timeframe: "Sep 2025 — Present",
     image: "assets/drone.jpg",
+    images: [
+    "assets/ffvtol.jpg",
+    "assets/ffvtol1.jpg",
+    "assets/ffvtol2.jpg",
+    "assets/ffvtol3.jpg",
+  ],
     oneLiner: "Fixed-wing modular reconnaissance aircraft with gimbal VTOL capability.",
     description:
       "Capstone senior design project focused on aerodynamic system integration and clear technical communication across design phases.",
@@ -138,7 +144,7 @@ projects: [
   ],
     oneLiner: "Physics-based modeling and numerical problem solving using engineering software.",
     description:
-      "Representative engineering analysis projects emphasizing modeling assumptions, numerical methods, and result interpretation.",
+      "Representative engineering analysis problems drawn from a wide range of disciplines, emphasizing the formulation of modeling assumptions, application of numerical methods, and interpretation of computational results. The projects demonstrate the use of MATLAB to translate physical systems into solvable mathematical models and to extract meaningful engineering insight from simulation outputs.",
     highlights: [
       "Developed physics-based computational models",
       "Solved ODE-driven systems using numerical techniques",
@@ -151,6 +157,34 @@ projects: [
   // =====================
   // ACADEMIC — ADDITIONAL COURSE PROJECTS
   // =====================
+{
+  id: "controls",
+  title: "Flight Dynamics & Control — MATLAB Control Systems (AEM 468)",
+  category: "academic",
+  timeframe: "Course Project",
+  image: "assets/controls.jpg",
+  images: [ 
+    "assets/controls2.jpg",
+    "assets/controls3.jpg",
+    "assets/controls4.jpg",
+    "assets/controls5.jpg",
+    "assets/controls6.jpg",
+    "assets/controls7.jpg",
+    "assets/controls8.jpg"
+  ],
+  oneLiner: "Simulated aircraft dynamics and controller performance using MATLAB and classical control theory.",
+  description:
+    "These MATLAB-based control systems homework projects focused on modeling spacecraft and aircraft dynamics and designing feedback controllers using classical control methods. I analyzed system stability, tuned controller parameters, and validated system response to various disturbances and flight conditions.",
+  highlights: [
+    "Modeled aircraft flight dynamics using linearized state-space equations",
+    "Designed PID and lead-lag controllers for pitch and attitude control",
+    "Analyzed system response via Bode plots, root locus, and step response",
+    "Simulated disturbance rejection and controller robustness in MATLAB"
+  ],
+  tools: ["MATLAB", "Control Systems", "Flight Dynamics", "Modeling & Simulation"],
+  links: []
+},
+
   {
     id: "wake",
     title: "Aircraft Wake Modeling & Analysis — Aerodynamics (AEM 313)",
@@ -178,11 +212,12 @@ projects: [
     video: "assets/orbital.mp4",          
     oneLiner: "Designed and analyzed spacecraft trajectories using orbital mechanics principles.",
     description:
-      "MATLAB-based project applying orbital mechanics theory to spacecraft mission design and trajectory analysis.",
+      "MATLAB-based spacecraft mission design project applying orbital mechanics theory and the method of patched conics to interplanetary trajectories.",
     highlights: [
-      "Simulated orbital transfers and mission profiles",
-      "Applied two-body and orbital mechanics equations",
-      "Validated results through numerical simulation",
+      "Simulated multi-leg interplanetary missions using the patched conics method",
+      "Computed delta-V, time-of-flight, and phase angle requirements for each trajectory segment",
+      "Generated static trajectory plots and frame-by-frame MATLAB animations to visualize spacecraft motion",
+      "Adhered to course MATLAB code structure and style constraints"
     ],
     tools: ["MATLAB", "Orbital Mechanics", "Modeling & Simulation"],
     links: [],
@@ -262,11 +297,12 @@ projects: [
     image: "assets/linalg.jpg",
     oneLiner: "Applied linear algebra concepts to computational problem solving.",
     description:
-      "MATLAB project demonstrating practical applications of linear algebra concepts such as eigenvalues, matrix operations, and systems of equations.",
+      "MATLAB project demonstrating how linear algebra can be used to encode and decode messages through matrix transformations. The project applies matrix multiplication and inversion to encrypt a message and recover the original data, illustrating the practical role of linear algebra in information encoding and computational problem solving.",
     highlights: [
-      "Implemented matrix-based computational solutions",
-      "Analyzed eigenvalues and system behavior",
-      "Validated results through numerical examples",
+      "Second time using MATLAB to solve a technical problem",
+      "Constructed an invertible encoding matrix to encrypt structured data",
+      "Applied matrix inversion to decode and recover the original message",
+      "Verified matrix operations in MATLAB, ensuring accurate reconstruction",
     ],
     tools: ["MATLAB"],
     links: [],
@@ -282,9 +318,10 @@ projects: [
     description:
       "Project focused on solving and interpreting differential equation models representing physical systems.",
     highlights: [
+      "First introduction to MATLAB problem solving",
       "Formulated ODE models from physical systems",
-      "Solved equations using numerical integration",
-      "Interpreted transient and steady-state behavior",
+      "Implemented Euler’s method in MATLAB and compared numerical solutions to exact solutions",
+      "Visualized system behavior using solution plots and direction fields to analyze transient and long-term behavior",
     ],
     tools: ["MATLAB", "Numerical Methods"],
     links: [
@@ -294,7 +331,7 @@ projects: [
 
   {
     id: "rocketAlgo",
-    title: "Rocket Flight Simulation & Fuel Mass Estimation — Python Project",
+    title: "Algorithm Devl & Implementation — Python Project (AEM 249)",
     category: "academic",
     timeframe: "Course Project",
     image: "assets/rocketsimulation.jpg",
@@ -302,6 +339,7 @@ projects: [
     description:
       "Algorithm development project simulating rocket flight dynamics to estimate fuel mass and trajectory behavior.",
     highlights: [
+      "First time using programming to solve an engineering problem",
       "Developed Python algorithms for rocket flight simulation",
       "Computed fuel mass requirements based on mission constraints",
       "Visualized trajectory and performance metrics",
@@ -318,11 +356,12 @@ projects: [
     image: "assets/flimech.jpg",
     oneLiner: "Analyzed aircraft performance metrics using flight mechanics theory.",
     description:
-      "MATLAB project applying flight mechanics principles to evaluate aircraft performance characteristics.",
+      "MATLAB-based aircraft performance analysis project applying flight mechanics principles to evaluate and compare the performance characteristics of propeller-driven and jet aircraft. The project computes and visualizes key performance metrics across altitude and operating conditions, translating analytical flight mechanics equations into comprehensive, simulation-driven performance assessments.",
     highlights: [
-      "Computed performance parameters from flight mechanics equations",
-      "Analyzed sensitivity to operating conditions",
-      "Validated results through simulation",
+      "Evaluated aircraft performance using flight mechanics equations implemented in MATLAB",
+      "Analyzed altitude and operating-condition sensitivity across multiple performance metrics",
+      "Visualized results through performance curves, envelopes, and constraint diagrams",
+      "Adhered to MATLAB code style restrictions",
     ],
     tools: ["MATLAB", "Flight Mechanics", "Performance Analysis"],
     links: [],
@@ -345,6 +384,29 @@ projects: [
     tools: ["MATLAB", "Numerical Analysis"],
     links: [],
   },
+
+  {
+  id: "glider",
+  title: "Introduction to Aerospace Engineering — Glider Project (AEM 121)",
+  category: "Academic",
+  timeframe: "Final Project",
+  image: "assets/glider.jpg", // main image
+  images: [
+    "assets/glider1.jpg"
+  ],
+  oneLiner: "Designed, built, and tested a custom glider to meet performance, budget, and materials constraints.",
+  description:
+    "Introductory hands-on aerospace project focused on designing a low-cost, hand-launched glider that could carry a payload. The project involved airfoil shaping, structural design, and empirical testing of various flight parameters.",
+  highlights: [
+    "First hands-on aerospace design, fabrication, and testing experience",
+    "Custom asymmetric airfoil shaped from foam to maximize low-speed lift",
+    "Payload bay and structure designed within budget and weight constraints",
+    "Tested performance by varying angle of attack, payload mass, and launch profile"
+  ],
+  tools: ["Foam Cutting", "Airfoil Design", "Flight Testing"],
+  links: [],
+},
+
 
   // =====================
   // EXTRACURRICULAR
@@ -378,7 +440,7 @@ projects: [
     highlights: [
       "Designed a single-stage liquid bi-propellant rocket for the DPF challenge",
       "Conducted hydrostatic pressure testing using ASME 1.5× FoS",
-      "Designed and manufactured igniters, test stand, and P&ID",
+      "Designed and manufactured igniters, flame trench, test stand, and P&ID",
     ],
     tools: ["Testing", "Fabrication", "Manufacturing"],
     links: [],
@@ -399,8 +461,8 @@ projects: [
     "Undergraduate research exploring brain-computer interfaces for drone control within the Brain-Drone Race framework.",
   highlights: [
     "Researched neural signal-based drone control",
-    "Supported experimental setup and iteration",
-    "Documented and communicated results clearly",
+    "Familiarized myself with AI/ML in PyTorch",
+    "Created a game using Phaser.js to teach radar behavior to high school students",
   ],
   tools: ["Research", "AI/ML", "Phaser.js", "PyTorch"],
   links: [
@@ -431,7 +493,7 @@ projects: [
     "Built a custom FPV drone and optimized propeller designs through CFD, 3D printing, and test-stand validation.",
   highlights: [
     "Optimized propeller geometry using CFD",
-    "Validated designs with physical testing",
+    "Validated designs via wind-tunnel testing",
     "Integrated electrical systems via precision soldering",
   ],
   tools: ["CFD", "3D Printing", "Testing", "Soldering"],
@@ -611,15 +673,15 @@ function renderAbout() {
 // =======================
 // 4) RENDER: PROJECTS
 // =======================
-let activeFilter = "all";
+let activeFilter = "All";
 
 function renderProjects() {
   const grid = $("#projectGrid");
   grid.innerHTML = "";
 
   const items = SITE.projects.filter((p) => {
-    if (activeFilter === "all") return true;
-    if (p.category === "all-only") return false;
+    if (activeFilter === "All") return true;
+    if (p.category === "All-only") return false;
     return p.category === activeFilter;
   });
 
