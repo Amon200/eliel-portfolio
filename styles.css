@@ -475,7 +475,7 @@ input:focus, textarea:focus{
 }
 
 
-/*/* 👇 move these OUT of the media query! 
+ /*👇 move these OUT of the media query! */
 #modalImg {
   display: flex;
   flex-direction: row;
@@ -484,9 +484,9 @@ input:focus, textarea:focus{
   scroll-snap-type: x mandatory;
   padding-bottom: 1rem;
 
-  min-height: 360px;
+  min-height: 310px; 
 }
-
+/*
 #modalImg > .modal__img {
   scroll-snap-align: start;
   flex-shrink: 0;
@@ -505,7 +505,7 @@ input:focus, textarea:focus{
 #modalImg::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.2);
   border-radius: 6px;
-} */
+} 
 
 
 /* Modal */
