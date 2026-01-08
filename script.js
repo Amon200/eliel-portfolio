@@ -966,18 +966,30 @@ function setupNavToggle() {
   });
 }
 
+// Added sun and moon logo instead of simply "Theme" label
 function setupTheme() {
   const btn = $("#themeToggle");
   const saved = localStorage.getItem("theme");
-  if (saved) document.documentElement.setAttribute("data-theme", saved);
+
+  const applyLabel = (theme) => {
+    btn.textContent = theme === "dark" ? "☀︎" : "☾";
+  };
+
+  const initialTheme = saved || "dark";
+  document.documentElement.setAttribute("data-theme", initialTheme);
+  applyLabel(initialTheme);
 
   btn.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme") || "dark";
+    const current =
+      document.documentElement.getAttribute("data-theme") || "dark";
     const next = current === "dark" ? "light" : "dark";
+
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
+    applyLabel(next);
   });
 }
+
 
 function setupFilters() {
   $$(".chip").forEach((chip) => {
