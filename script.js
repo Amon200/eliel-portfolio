@@ -455,7 +455,7 @@ projects: [
   category: "research",
   timeframe: "Feb 2025 — Present",
   image: "assets/radar.jpg", // main image
-  video: "assets/aiml.mp4",  // additional video underneath
+  video: "assets/aimlvideo.mp4",  // additional video underneath
   oneLiner: "Brain-computer interfaces for drone control using neural signals.",
   description:
     "Undergraduate research exploring brain-computer interfaces for drone control within the Brain-Drone Race framework.",
