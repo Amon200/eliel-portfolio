@@ -972,7 +972,7 @@ function setupTheme() {
   const saved = localStorage.getItem("theme");
 
   const applyLabel = (theme) => {
-    btn.textContent = theme === "dark" ? "☀︎" : "☾";
+    btn.textContent = theme === "dark" ? "☀" : "☾";
   };
 
   const initialTheme = saved || "dark";
