@@ -35,7 +35,7 @@ const SITE = {
     tags: ["Honors College", "Aerospace Engineering", "STEM Path to MBA"],
     coursework: [
       "Flight Dynamics & Control (AEM 468)",
-      "Aircraft Structural Design",
+      "Aircraft Structural Design (AEM 451)",
       "Space Propulsion (AEM 428)",
       "Computational Fluid Dynamics (AEM 420)",
       "Propulsion Systems (AEM 408)",
