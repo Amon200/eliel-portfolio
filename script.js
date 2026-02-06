@@ -321,7 +321,7 @@ projects: [
     highlights: [
       "First introduction to MATLAB problem solving",
       "Formulated ODE models from physical systems",
-      "Implemented Euler’s method in MATLAB and compared numerical solutions to exact solutions",
+      "Implemented Euler's method in MATLAB and compared numerical solutions to exact solutions",
       "Visualized system behavior using solution plots and direction fields to analyze transient and long-term behavior",
     ],
     tools: ["MATLAB", "Numerical Methods"],
@@ -515,60 +515,6 @@ projects: [
         "Worked as a business partner alongside MDA to create an integrated air and missile defense system concept.",
       ],
     },
-    /*{
-      when: "Sep 2025 — Present",
-      title: "Aerodynamics Systems Lead / Chief Technical Writer",
-      org: "FFVTOL Senior Design Project",
-      bullets: [
-        "Designed, manufactured, tested, and optimized a fixed-wing modular reconnaissance aircraft with gimbal VTOL capability.",
-      ],
-    },
-    {
-      when: "May 2025 — Aug 2025",
-      title: "Modeling and Simulation Intern",
-      org: "The Aerospace Corporation",
-      bullets: [
-        "Developed commands and scripts in AFSIM to simulate scheduled instantaneous field of view.",
-        "Created an MBSE schema in Cameo Systems Modeler to map program and enterprise capabilities.",
-      ],
-    },
-    {
-      when: "Feb 2025 — Present",
-      title: "Undergraduate Research Assistant",
-      org: "Human Technology Interaction Lab",
-      bullets: [
-        "Researched brain-computer interfaces for the Brain-Drone Race using neural signals to control drones.",
-      ],
-    },
-    {
-      when: "Nov 2024 — Present",
-      title: "Systems Engineering Lead / Chief Technical Writer",
-      org: "A.A.E.R.O.",
-      bullets: [
-        "Built a custom FPV drone; supported flight control systems optimization.",
-        "Optimized propeller design via CFD, 3D printing, and stand testing.",
-        "Soldered wiring to the flight controller using flux for reliable integration.",
-      ],
-    },
-    {
-      when: "Feb 2024 — Mar 2025",
-      title: "Aerodynamics Team Member",
-      org: "Crimson Racing (Formula SAE)",
-      bullets: [
-        "Conducted CFD to optimize airflow and minimize drag on the undertray.",
-        "Executed composite layup processes for smooth geometry.",
-      ],
-    },
-    {
-      when: "Sep 2022 — Present",
-      title: "Liquids/Solids/Business Team Member",
-      org: "Alabama Rocketry Association (ARA)",
-      bullets: [
-        "Designed a single-stage liquid bi-propellant rocket for the DPF challenge.",
-        "Conducted hydrostatic pressure tests on aluminum tanks using ASME’s 1.5x FoS.",
-        "Designed/researched/manufactured igniters, test stand, flame trench, and P&ID.",
-      ],
-    }, */
     {
       when: "Apr 2025 — Present",
       title: "Membership Chair",
@@ -867,12 +813,6 @@ function renderExperience() {
   </div>
 `;
 
-
-
-
-
-
-
     wrap.appendChild(el);
   });
 }
@@ -1029,7 +969,109 @@ function setupForm() {
 }
 
 // =======================
-// 8) INIT
+// 8) COSMIC ANIMATIONS
+// =======================
+
+// Create shooting stars
+function createShootingStar() {
+  const star = document.createElement('div');
+  star.className = 'shooting-star';
+  
+  // Random starting position at top or right edge
+  const startFromTop = Math.random() > 0.5;
+  if (startFromTop) {
+    star.style.top = Math.random() * 50 + '%';
+    star.style.right = '-100px';
+  } else {
+    star.style.top = '-100px';
+    star.style.right = Math.random() * 50 + '%';
+  }
+  
+  document.body.appendChild(star);
+  
+  // Animate
+  setTimeout(() => {
+    star.style.animation = 'shooting-star 1.5s ease-out forwards';
+  }, 100);
+  
+  // Remove after animation
+  setTimeout(() => {
+    star.remove();
+  }, 2000);
+}
+
+// Create shooting stars at random intervals
+function initShootingStars() {
+  setInterval(() => {
+    if (Math.random() > 0.7) { // 30% chance every interval
+      createShootingStar();
+    }
+  }, 3000);
+  
+  // Create first star immediately
+  setTimeout(createShootingStar, 1000);
+}
+
+// Create floating cosmic orbs
+function createCosmicOrbs() {
+  const orbContainer = document.createElement('div');
+  orbContainer.style.position = 'fixed';
+  orbContainer.style.top = '0';
+  orbContainer.style.left = '0';
+  orbContainer.style.width = '100%';
+  orbContainer.style.height = '100%';
+  orbContainer.style.pointerEvents = 'none';
+  orbContainer.style.zIndex = '-1';
+  
+  for (let i = 1; i <= 3; i++) {
+    const orb = document.createElement('div');
+    orb.className = `cosmic-orb cosmic-orb-${i}`;
+    orbContainer.appendChild(orb);
+  }
+  
+  document.body.appendChild(orbContainer);
+}
+
+// Add parallax effect to sections on scroll
+function initParallax() {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.section');
+    
+    parallaxElements.forEach((el, index) => {
+      const speed = 0.05 * (index + 1);
+      el.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+  });
+}
+
+// Intersection Observer for fade-in animations
+function initScrollAnimations() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all cards and sections
+  document.querySelectorAll('.card, .project, .role').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+}
+
+// =======================
+// 9) INIT
 // =======================
 function init() {
   renderHero();
@@ -1046,16 +1088,20 @@ function init() {
   setupFilters();
   setupModal();
   setupForm();
+  
+  // Initialize cosmic effects
+  createCosmicOrbs();
+  initShootingStars();
+  initScrollAnimations();
 
   $("#year").textContent = new Date().getFullYear();
 }
 
 init();
 
-//javascript scroll to top  function
-
+//javascript scroll to top function
 document.getElementById("scrollToTopBtn").addEventListener("click", function (e) {
-  e.preventDefault(); // stops default anchor behavior
+  e.preventDefault();
   window.scrollTo({
     top: 0,
     behavior: "smooth"
