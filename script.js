@@ -43,7 +43,7 @@ const SITE = {
       "Senior Design II (AEM 404)",
       "Astronautics (AEM 360)",
       "Engineering Analysis (ME 349)",
-      "Scientific Computing & Problem Solving (Math 311",
+      "Scientific Computing & Problem Solving (Math 311)",
       "Algorithm Devl & Implementation (AEM 249)",
       "Applied Differential Equations (MATH 238)",
       "Linear Algebra (MATH 237)",
