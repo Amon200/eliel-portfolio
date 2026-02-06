@@ -114,6 +114,9 @@ projects: [
     timeframe: "Sep 2025 — Present",
     image: "assets/drone.jpg",
     images: [
+    "assets/ffvtol4.jpg",
+    "assets/subsystem1.jpg",
+    "assets/subsystem2.jpg",
     "assets/ffvtol.jpg",
     "assets/ffvtol1.jpg",
     "assets/ffvtol2.jpg",
